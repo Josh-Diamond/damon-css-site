@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -46,29 +48,107 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* //////////////////////CSS reset My Work Below//////////////////////// */
 
-/* /////////////// CSS RESET ABOVE - My Styles Below  ////////////////// */
-
-body {
-    background-color: #202124;
-    color: white;
+body{
+    background-color:#202124;
+    color:white;
 }
-
-h1 {
-    margin: 25px auto;
+h1{
     text-align: center;
+    margin:25px auto;
+	font-family:lobster;
+	text-shadow:0 0 25px gold;
+	/* border-bottom:4px solid white;
+	border-radius:50%; */
+} 
+nav{
+	border-bottom:4px solid white;
+	border-radius:50%;
+	padding-bottom:15px
+	
+
+}
+nav > a{
+	color:white;
+	text-decoration:none;
+	margin:0 25px;
+	font-family:lobster;
+	
+}
+nav > a:hover {
+	text-shadow:0 0 25px gold;
+	text-decoration: underline;
 }
 
-nav {
-	border: 1px solid blue;
+/* Portfolio Card Styles */
+
+.card {
+	height: 500px;
+	width: 350px;
+	margin: 50px auto;
+	background-color: white;
+	background-color: #202124;
+	border-radius: 18px;
+	box-shadow: 0px 0px 42px 19px rgba(255,255,255,0.53);
+	-webkit-box-shadow: 0px 0px 42px 19px rgba(255,255,255,0.53);
+	-moz-box-shadow: 0px 0px 42px 19px rgba(255,255,255,0.53);
 }
 
-nav > a {
+.card img {
+	width: 200px;
+	height: 200px;
+	margin-left: 75px;
+	margin-right: 75px;
+	margin-top: 75px;
+	border-radius: 50%;
+	border: 1px solid gray;
+	box-shadow: 1px 1px 24px 1px rgba(255,255,255,0.75);
+	-webkit-box-shadow: 1px 1px 24px 1px rgba(255,255,255,0.75);
+	-moz-box-shadow: 1px 1px 24px 1px rgba(255,255,255,0.75);	
+}
+
+.card h2, h4 {
+	color: black;
+	text-align: center;
+	margin: 25px auto;
+}
+
+.card h2 {
+	font-family: Lobster, sans-serif;
+	font-size: 36px;
+	text-shadow:0 0 25px white;
+}
+
+.card h2:hover {
+	text-shadow:0 0 25px gold;
+	color: white;
+	cursor: pointer;
+}
+
+.card h4 {
+	font-size: 20px;
+	color: gray;
+}
+
+.card h4:hover {
+	text-shadow: 0 0 25px gold;
+	color: white;
+	cursor: pointer;
+}
+
+.icons {
+	padding-top: 10px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.icons a {
 	text-decoration: none;
 	color: white;
 }
 
-nav > a:hover {
-	color: purple;
-	text-decoration: underline;
+.icons a:hover {
+	cursor: pointer;
+	text-shadow:0 0 25px gold;
 }
