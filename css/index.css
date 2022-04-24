@@ -53,26 +53,35 @@ table {
 body{
     background-color:#202124;
     color:white;
+	height: 100vh;
+	box-sizing: border-box;
+	overflow-y: hidden;
+}
+header {
+	max-height: 100px;
 }
 h1{
     text-align: center;
     margin:25px auto;
 	font-family:lobster;
 	text-shadow:0 0 25px gold;
+	animation-name: rainbowGlow;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
 	/* border-bottom:4px solid white;
 	border-radius:50%; */
 } 
 nav{
 	border-bottom:4px solid white;
 	border-radius:50%;
-	padding-bottom:15px
-	
+	padding-bottom:15px;
+	display: flex;
+	justify-content: space-around;
 
 }
 nav > a{
 	color:white;
 	text-decoration:none;
-	margin:0 25px;
 	font-family:lobster;
 	
 }
@@ -80,19 +89,28 @@ nav > a:hover {
 	text-shadow:0 0 25px gold;
 	text-decoration: underline;
 }
+/* Website Page Styles */
 
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: calc(100vh - 100px);
+}
 /* Portfolio Card Styles */
 
 .card {
 	height: 500px;
 	width: 350px;
-	margin: 50px auto;
+	/* margin: 50px auto; */
 	background-color: white;
 	background-color: #202124;
 	border-radius: 18px;
 	box-shadow: 0px 0px 42px 19px rgba(255,255,255,0.53);
 	-webkit-box-shadow: 0px 0px 42px 19px rgba(255,255,255,0.53);
 	-moz-box-shadow: 0px 0px 42px 19px rgba(255,255,255,0.53);
+	animation-name: fadeIn;
+	animation-duration: 2s;
 }
 
 .card img {
@@ -118,6 +136,11 @@ nav > a:hover {
 	font-family: Lobster, sans-serif;
 	font-size: 36px;
 	text-shadow:0 0 25px white;
+	/* animation-name: rainbowGlow;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate-reverse; */
+	/* animation: rainbowGlow 5s 2s infinite; */
 }
 
 .card h2:hover {
@@ -151,4 +174,36 @@ nav > a:hover {
 .icons a:hover {
 	cursor: pointer;
 	text-shadow:0 0 25px gold;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes rainbowGlow {
+	0% {
+		color: blue;
+	}
+	25% {
+		color: rgba(0, 144, 10, 0.797);
+	}
+	50% {
+		color: lightgreen
+	}
+	75% {
+		color: orchid;
+	}
+	100% {
+		color: purple;
+	}
+}
+
+.animate__animated.animate__rubberBand {
+	
+	animation-duration: 5s;
 }
